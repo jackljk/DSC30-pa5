@@ -48,12 +48,10 @@ public class Sorts<T extends Comparable<? super T>> {
      */
     public void MergeSort(ArrayList<T> list, int start, int end) {
 
-        if (start < end)
-        {
+        if (start < end) {
             int mid = start + (end - start) / MIDDLE_IDX;
             MergeSort(list, start, mid);
             MergeSort(list , mid + 1, end);
-
             merge(list, start, mid, end);
         }
     }
@@ -76,8 +74,7 @@ public class Sorts<T extends Comparable<? super T>> {
             if (arr.get(left).compareTo(arr.get(right)) <= 0) {
                 mergedNums.add(arr.get(left));
                 left++;
-            }
-            else {
+            } else {
                 mergedNums.add(arr.get(right));
                 right++;
             }
@@ -146,7 +143,7 @@ public class Sorts<T extends Comparable<? super T>> {
                 arr.set(h, temp);
                 // Moves the pointers after the swap
                 l++;
-                h --;
+                h--;
             }
         }
         return l;
