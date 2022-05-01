@@ -6,7 +6,7 @@
 import java.util.ArrayList;
 
 /**
- * TODO: add class Runtime analysis of sorting algorithms
+ * Runtime analysis of sorting algorithms
  */
 public class RuntimeAnalysis {
 

@@ -176,36 +176,6 @@ public class Sorts<T extends Comparable<? super T>> {
             }
         }
     }
-    private int partitionMQS(ArrayList<T> arr, int l, int h) {
-        // Partition and puts values smaller than pivot on the left and values larger than the
-        // pivot to the right
-        int midpoint = l + (h - l)/MIDDLE_IDX;
-        T pivot = arr.get(midpoint);
-        // Keeps looping until the low pointer passes the high
-        while (l <= h){
-            while (arr.get(l).compareTo(pivot) < 0){
-                //Keeps moving the low point 1 to the right until it reaches a value larger than
-                // the pivot
-                l++;
-            }
-            while (arr.get(h).compareTo(pivot) > 0){
-                //Keeps moving the low point 1 to the right until it reaches a value smaller than
-                // the pivot
-                h--;
-            }
-            if (l<=h){
-                //Swaps the 2 values when the pointers stop moving and the pointers haven't
-                // passed each other
-                T temp = arr.get(l);
-                arr.set(l, arr.get(h));
-                arr.set(h, temp);
-                // Moves the pointers after the swap
-                l++;
-                h --;
-            }
-        }
-        return l;
-    }
     /**
      * This method performs cocktail sort on the input list
      *
